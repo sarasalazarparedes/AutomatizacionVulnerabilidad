@@ -40,10 +40,11 @@ public final class  LoginPageTests {
         new HomePage(chrome).skipBanner().navigateToLogin();
         email = getRandomEmail();
         password="sara2311";
+        Thread.sleep(2000);
         CustomerFormModel customerFormModel = new CustomerFormModel.
                 CustomerFormBuilder(email,password).
                 answer("test").build();
-        Thread.sleep(2000);
+
         new NewCustomerPage(chrome).registerNewCustomer(customerFormModel);
     }
 

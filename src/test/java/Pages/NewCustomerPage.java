@@ -26,7 +26,9 @@ public class NewCustomerPage extends BasePage {
         Session.getSession().getBrowser().findElement(password).sendKeys(customerFormModel.getPassword());
         Session.getSession().getBrowser().findElement(repeatPassword).sendKeys(customerFormModel.getPassword());
         Session.getSession().getBrowser().findElement(openDropDown).click();
+        Thread.sleep(2000);
         Session.getSession().getBrowser().findElement(selectOption).click();
+        Thread.sleep(2000);
         Session.getSession().getBrowser(). findElement(securityAnswer).sendKeys(customerFormModel.getAnswer());
         Thread.sleep(2000);
         Session.getSession().getBrowser().findElement(registerButton).click();
